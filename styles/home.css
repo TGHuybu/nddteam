@@ -44,6 +44,10 @@ body {
     cursor: pointer;
     transition: .2s
 }
+.active {
+    background-color: azure;
+    color: black;
+}
 .title {
     position: absolute;
     top: 50%;
