@@ -13,7 +13,8 @@ body {
     background-color: #2c3138;
     user-select: none;
     margin-top: 0;
-    height: 8.6vh;
+    /* height: 8.6vh; */
+    display: flex;
 }
 .nav-tabs {
     list-style-type: none;
