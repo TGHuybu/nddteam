@@ -71,18 +71,23 @@ body {
     transform: scaleX(1);
     /* transform-origin: bottom left; */
 }
-
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: white;
     border: 5px solid white;
 
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 25px;
+
+    margin-top: 22vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-bottom: 22vh;
 }
 #title {
     text-align: center;
