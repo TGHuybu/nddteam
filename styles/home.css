@@ -3,11 +3,8 @@ body {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
-
-    background-image: url("../resources/deepfield.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: black;
+    font-family: Helvetica, sans-serif;
 }
 .nav-bar {
     background-color: #2c3138;
@@ -15,6 +12,8 @@ body {
     margin-top: 0;
     /* height: 8.6vh; */
     display: flex;
+    position: sticky;
+    top: 0;
 }
 .nav-tabs {
     list-style-type: none;
@@ -36,7 +35,7 @@ body {
     padding-bottom: 2.5vh;
     text-decoration: none;
     font-size: 23px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     transition: .2s
 }
 .item:hover {
@@ -71,28 +70,39 @@ body {
     transform: scaleX(1);
     /* transform-origin: bottom left; */
 }
-.home-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .title {
+    text-align: center;
+}
+.title #bg-img {
+    position: absolute;
+    top: 0%;
+    background: url(../resources/deepfield.jpg);
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -900;
+}
+.title-wrapper {
     color: white;
-    border: 5px solid white;
-
+    border: 2px solid white;
     padding-left: 50px;
     padding-right: 50px;
-    padding-bottom: 25px;
-
-    margin-top: 22vh;
+    /* padding-bottom: 25px; */
+    
+    margin-top: 25vh;
     margin-left: 20vw;
     margin-right: 20vw;
-    margin-bottom: 22vh;
+    /* margin-bottom: 22vh; */
 }
 #title {
     text-align: center;
     font-size: 55px;
     margin-bottom: 10px;
+    letter-spacing: 4px;
+    font-weight: bold;
 }
 #intro {
     color: black;
@@ -101,4 +111,151 @@ body {
     font-size: 25px;
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    letter-spacing: 2px;
+    font-weight: lighter;
+}
+
+.scroll-down {
+    opacity: 1;
+    -webkit-transition: all .5s ease-in 3s;
+    transition: all .5s ease-in 3s;
+}
+  
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -16px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #FFF;
+    background-size: 14px auto;
+    border-radius: 50%;
+    z-index: 2;
+    -webkit-animation: bounce 2s infinite 2s;
+    animation: bounce 2s infinite 2s;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+  
+.scroll-down:before {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 7px);
+    transform: rotate(-45deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 2px solid white;
+    border-width: 0px 0 2px 2px;
+  }
+  
+@keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+    60% {
+      -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      transform: translateY(-5px);
+    }
+}
+
+.project-wrapper {
+    position: absolute;
+    top: 100%;
+    /* margin-left: -16px; */
+    display: flex;
+    width: 100%;
+}
+.left {
+    background-color: white;
+    width: 50%;
+    height: 100vh;
+    transition: 0.3s;
+    background-image: url(../resources/elt.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.left-overview {
+    color: white;
+    text-align: center;
+    padding-top: 35vh;
+}
+.left:hover {
+    transition: 0.3s;
+    width: 60%;
+}
+#project-name {
+    color: white;
+
+    display: inline-block;
+    
+    background-image: linear-gradient(#e7af2d,#e7af2d);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: .4s;
+}
+.left:hover #project-name {
+    user-select: none;
+    background-size: 100% 100%;
+}
+.right {
+    background-color: white;
+    width: 50%;
+    height: 100vh;
+    transition: 0.3s;
+    background-image: url(../resources/alma.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.right:hover {
+    transition: 0.3s;
+    width: 60%;
+}
+.right:hover #project-name {
+    user-select: none;
+    background-size: 100% 100%;
+}
+
+#project-name {
+    font-size: 60px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bolder;
+    letter-spacing: 5px;
+}
+#description {
+    margin-top: 4px;
+    font-size: 24px;
+}
+#read-more {
+    display: inline-block;
+    font-size: 35px;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+    color: rgb(89, 89, 89);
+    background-color: white;
+    margin-top: 25px;
+    padding-top: 5px; 
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    letter-spacing: 3px;
+    border-radius: 5px;
 }

@@ -4,6 +4,7 @@ body {
     margin-right: 0;
     margin-bottom: 0;
     background-color: black;
+    font-family: Helvetica, sans-serif;
 }
 .home-page {
     margin-bottom: 20vh;
@@ -123,11 +124,11 @@ body {
 
 #member-image {
     /* border: 1px solid red; */
-    width: 25vw;
+    width: 400px;
     margin-left: 10vw;
 }
 #member-image-right {
-    width: 25vw;
+    width: 400px;
     margin-right: 10vw;
 }
 .member {
@@ -140,13 +141,13 @@ body {
     margin-top: 25vh;
 }
 .contents {
-    margin-top: 10vh;
+    margin-top: 5%;
     margin-left: 2vw;
     margin-right: 10vw;
 }
 .contents-right {
     text-align: right;
-    margin-top: 10vh;
+    margin-top: 5%;
     margin-right: 2vw;
     margin-left: 10vw;
 }
