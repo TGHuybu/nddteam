@@ -1,4 +1,8 @@
 var background = document.getElementById("bg-img");
+// var home = document.getElementById("home");
+// var projects = document.getElementById("projects");
+
+// var height = screen.height;
 
 window.addEventListener("scroll", function() {
     background.style.opacity = 1 - +window.pageYOffset/550 + "";
@@ -8,7 +12,7 @@ window.addEventListener("scroll", function() {
 
 $(function() {
     $('.to-projects').click(function() {
-        $('html, body').animate({scrollTop: $('.project-wrapper').offset().top }, 'slow');
+        $('html, body').animate({scrollTop: $('#project-wrapper').offset().top }, 'slow');
         return false;
     });
 });
