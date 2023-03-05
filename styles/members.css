@@ -161,3 +161,8 @@ body {
     border-radius: 50%;
     object-fit: contain;
 }
+
+.cv-link {
+    text-decoration: none;
+    color: white;
+}

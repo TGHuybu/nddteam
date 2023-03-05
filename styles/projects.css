@@ -115,16 +115,18 @@ body {
     padding-top: 10vh;
     padding-bottom: 10vh;
 }
-@media (max-width: 600px) {
-    .note {
+@media (max-width: 950px) {
+    #bg-img {
+        background-attachment: scroll;
+    }
+    /* .note {
         display: hidden;
     }
     .project-summary {
         font-size: 15px;
     }
     .project-content {
-        /* position: absolute;
-        top: 100vh; */
+        position: relative;
         background-color: white;
         font-size: 18px;
         color: black;
@@ -132,5 +134,5 @@ body {
         padding-right: 5vw;
         padding-top: 10vh;
         padding-bottom: 10vh;
-    }
+    } */
 }
