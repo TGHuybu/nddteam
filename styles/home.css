@@ -185,56 +185,111 @@ body {
     width: 70%;
     justify-content: center;
 }
+@keyframes show_ELT {
+    0% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), white), url(../resources/vlt.jpg);
+        background-position: bottom, center;
+        background-size: 100% 0%, cover;
+        background-repeat: no-repeat;
+    }
+    100% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), white), url(../resources/vlt.jpg);
+        background-position: bottom, center;
+        background-size: 100% 100%, cover;
+        background-repeat: no-repeat;
+    }
+}
+@keyframes show_ALMA {
+    0% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), white), url(../resources/alma-night.jpg) ;
+        background-position: bottom, center;
+        background-size: 100% 0%, cover;
+        background-repeat: no-repeat;
+    }
+    100% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), white), url(../resources/alma-night.jpg);
+        background-position: bottom, center;
+        background-size: 100% 100%, cover;
+        background-repeat: no-repeat;
+    }
+}
 .entry {
     border-radius: 10px;
     border: 2px solid white;
     margin-left: 1vw;
     margin-right: 1vw;
     margin-bottom: 10vw;
-    padding-top: 5vw;
     text-align: center;
-    background-color: white;
     width: 40vw;
     height: 25vw;
 }
+.project-name {
+    padding-bottom: 3vw;
+}
 #ELT-HARMONI {
-    background-image: url(../resources/vlt.jpg);
+    background-image: none, none, url(../resources/vlt.jpg);
     background-position: center;
     background-size: cover;
+}
+#ELT-HARMONI:hover {
+    animation-name: show_ELT;
+    animation-duration: 0.5s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0s; 
+    animation-iteration-count: 1;
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0), white), url(../resources/vlt.jpg);
+    background-position: bottom, center;
+    background-size: 100% 100%, cover;
+    background-repeat: no-repeat;
 }
 #ALMA {
-    background-image: url(../resources/alma-night.jpg);
+    background-image: none, none, url(../resources/alma-night.jpg);
     background-position: center;
     background-size: cover;
 }
-#project-name {
+#ALMA:hover {
+    animation-name: show_ALMA;
+    animation-duration: 0.5s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0s; 
+    animation-iteration-count: 1;
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0), white), url(../resources/alma-night.jpg);
+    background-position: bottom, center;
+    background-size: 100% 100%, cover;
+    background-repeat: no-repeat;
+}
+.read-more {
     color: white;
     display: inline-block;
     background-image: linear-gradient(#e7af2d,#e7af2d);
     background-size: 0 100%;
     background-repeat: no-repeat;
     transition: .4s;
-}
-.entry:hover #project-name {
-    user-select: none;
-    background-size: 100% 100%;
-}
-
-#project-name {
     font-size: 2vw;
     font-family: Helvetica, sans-serif;
     font-weight: bolder;
     letter-spacing: 3px;
-}
-#description {
-    margin-top: 2vw;
-    font-size: 3vw;
-    margin-left: 6vw;
-    margin-right: 6vw;
-}
-#read-more {
     color: white;
     text-decoration: none;
     user-select: none;
     cursor: pointer;
+    margin-top: 3vw;
+}
+.entry:hover .read-more {
+    user-select: none;
+    background-size: 100% 100%;
+}
+.description {
+    user-select: none;
+    color: rgba(0, 0, 0, 0);
+    padding-left: 3vw;
+    padding-right: 3vw;
+    text-align: left;
+    font-size: 2vh;
+}
+.entry:hover .description {
+    color: white;
+    transition: 0.3s;
 }
