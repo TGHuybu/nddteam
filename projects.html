@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — NDD Research Group</title>
+  <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand"><span class="brand-dot"></span>NDD Group</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#news">News</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="section-inner">
+    <span class="section-label">Work</span>
+    <h1 class="section-title">Projects</h1>
+    <div class="divider"></div>
+    <p class="section-desc">Ongoing and upcoming research projects, observing proposals, and scientific campaigns led or co-led by the group.</p>
+  </div>
+</div>
+
+<!-- ── Running Projects ── -->
+<section class="section">
+  <div class="section-inner">
+
+    <div style="font-size:.7rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--text-muted); margin-bottom:1.25rem; padding-bottom:.5rem; border-bottom:1px solid var(--border);">
+      Running Projects
+    </div>
+
+    <div class="project-grid">
+
+      <!-- PROJECT TEMPLATE — duplicate and fill in -->
+      <div class="project-card anim">
+        <div class="project-card-status active">Active</div>
+        <div class="project-card-title">Project Name / Proposal Title</div>
+        <div class="project-card-desc">Short description of the project goals, target objects, and expected outcomes. What question is this project trying to answer?</div>
+        <div class="project-card-meta">
+          <span class="project-tag">JWST</span>
+          <span class="project-tag">NIRSpec</span>
+          <span class="project-tag">Black Holes</span>
+        </div>
+      </div>
+
+      <div class="project-card anim" style="animation-delay:.08s">
+        <div class="project-card-status active">Active</div>
+        <div class="project-card-title">Project Name / Proposal Title</div>
+        <div class="project-card-desc">Short description of the project goals, target objects, and expected outcomes. What question is this project trying to answer?</div>
+        <div class="project-card-meta">
+          <span class="project-tag">ALMA</span>
+          <span class="project-tag">Molecular Gas</span>
+          <span class="project-tag">SMBHs</span>
+        </div>
+      </div>
+
+      <div class="project-card anim" style="animation-delay:.16s">
+        <div class="project-card-status active">Active</div>
+        <div class="project-card-title">Project Name / Proposal Title</div>
+        <div class="project-card-desc">Short description of the project goals, target objects, and expected outcomes. What question is this project trying to answer?</div>
+        <div class="project-card-meta">
+          <span class="project-tag">Keck</span>
+          <span class="project-tag">Stellar Kinematics</span>
+          <span class="project-tag">IMBHs</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── Upcoming ── -->
+    <div style="font-size:.7rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--text-muted); margin: 3.5rem 0 1.25rem; padding-bottom:.5rem; border-bottom:1px solid var(--border);">
+      Upcoming / In Preparation
+    </div>
+
+    <div class="project-grid">
+
+      <div class="project-card anim">
+        <div class="project-card-status upcoming">Upcoming</div>
+        <div class="project-card-title">Project Name / Proposal Title</div>
+        <div class="project-card-desc">Short description of the planned project or proposal. Which facility is being targeted? What is the science driver?</div>
+        <div class="project-card-meta">
+          <span class="project-tag">ELT</span>
+          <span class="project-tag">HARMONI</span>
+          <span class="project-tag">Simulation</span>
+        </div>
+      </div>
+
+      <div class="project-card anim" style="animation-delay:.08s">
+        <div class="project-card-status upcoming">Upcoming</div>
+        <div class="project-card-title">Project Name / Proposal Title</div>
+        <div class="project-card-desc">Short description of the planned project or proposal. Which facility is being targeted? What is the science driver?</div>
+        <div class="project-card-meta">
+          <span class="project-tag">GMT</span>
+          <span class="project-tag">Galaxy Evolution</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── How to add new projects box ── -->
+    <div style="background:var(--bg-card); border:1px dashed var(--border); border-radius:var(--radius); padding:2rem; margin-top:3rem; text-align:center;" class="anim">
+      <i class="fas fa-plus-circle" style="font-size:1.5rem; color:var(--text-muted); margin-bottom:.75rem; display:block;"></i>
+      <div style="color:var(--text-muted); font-size:.87rem;">
+        To add a new project, copy a <code style="color:var(--accent); background:var(--accent-dim); padding:.1rem .4rem; border-radius:4px;">.project-card</code> block, 
+        update the title, description, status badge, and tags.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-copy">Copyright &copy; Nguyen et al. 2026</span>
+    <span class="footer-brand">NDD Research Group</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Research — NDD Research Group</title>
   <link rel="icon" type="image/x-icon" href="assets/logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -12,97 +11,64 @@
 </head>
 <body>
 
-<!-- ── Navigation ── -->
 <nav class="site-nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-brand">
-      <span class="brand-dot"></span>
-      NDD Group
-    </a>
-    <ul class="nav-links">
+    <a href="index.html" class="nav-brand"><span class="brand-dot"></span>NDD Group</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html#news">News</a></li>
       <li><a href="team.html">Team</a></li>
       <li><a href="research.html" class="active">Research</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="projects.html">Projects</a></li>
       <li><a href="publications.html">Publications</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- ── Page Hero ── -->
 <div class="page-hero">
   <div class="section-inner">
     <span class="section-label">Science</span>
     <h1 class="section-title">Research Interests</h1>
     <div class="divider"></div>
-    <p class="section-desc">
-      Our work spans black hole physics, galaxy evolution, and the next generation 
-      of observational facilities — from JWST to the Extremely Large Telescope.
-    </p>
+    <p class="section-desc">Our work spans black hole physics, galaxy evolution, and the next generation of observational facilities — from JWST to the Extremely Large Telescope.</p>
   </div>
 </div>
 
-<!-- ── Research Cards ── -->
+<!-- ── Topics ── -->
 <section class="section">
   <div class="section-inner">
     <div class="research-grid">
-
-      <!-- Black Holes -->
       <div class="research-card anim" data-bs-toggle="modal" data-bs-target="#modal_bh">
         <img class="research-card-img" src="assets/img/portfolio/bh.jpg" alt="Black hole" />
         <div class="research-card-body">
           <div class="research-card-title">Black Holes</div>
-          <div class="research-card-desc">
-            One of the modern mysteries of the universe. How do they form? How do they evolve 
-            and interact with their surroundings? We use a variety of data and techniques to 
-            uncover the properties of these fascinating objects.
-          </div>
+          <div class="research-card-desc">One of the modern mysteries of the universe. How do they form? How do they evolve and interact with their surroundings? We use a variety of data and techniques to uncover the properties of these fascinating objects.</div>
           <div class="research-card-btn">Learn More</div>
         </div>
       </div>
-
-      <!-- Galaxy Evolution -->
       <div class="research-card anim" style="animation-delay:.1s" data-bs-toggle="modal" data-bs-target="#modal_gal">
         <img class="research-card-img" src="assets/img/portfolio/gals.jpg" alt="Galaxies" />
         <div class="research-card-body">
           <div class="research-card-title">Galaxy Evolution</div>
-          <div class="research-card-desc">
-            Large and complex celestial bodies consisting of stars, dust, gas, and dark matter. 
-            How do galaxies change throughout their cosmic lifetime, with respect to their components?
-          </div>
+          <div class="research-card-desc">Large and complex celestial bodies consisting of stars, dust, gas, and dark matter. How do galaxies change throughout their cosmic lifetime with respect to their components?</div>
           <div class="research-card-btn">Learn More</div>
         </div>
       </div>
-
-      <!-- Facilities -->
-      <div class="research-card anim" style="animation-delay:.2s" data-bs-toggle="modal" data-bs-target="#modal_facilities">
-        <img class="research-card-img" src="assets/img/portfolio/facilities.jpg" alt="Telescopes" />
-        <div class="research-card-body">
-          <div class="research-card-title">Facilities &amp; Instruments</div>
-          <div class="research-card-desc">
-            Check out the main telescopes and instruments we rely on — from ALMA and JWST 
-            to the forthcoming Extremely Large Telescope.
-          </div>
-          <div class="research-card-btn">Learn More</div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- ── Keywords Bar ── -->
-<section style="padding: 3rem 0; background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+<!-- ── Keywords ── -->
+<section style="padding: 2.5rem 0; background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
   <div class="section-inner" style="text-align:center;">
-    <span class="section-label" style="display:block; margin-bottom:1.25rem;">Key Topics</span>
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:.6rem;">
+    <span class="section-label" style="display:block; margin-bottom:1.1rem;">Key Topics</span>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:.5rem;">
       <span class="kw">Supermassive Black Holes</span>
       <span class="kw">Intermediate-Mass Black Holes</span>
       <span class="kw">Stellar Kinematics</span>
       <span class="kw">Gas Dynamics</span>
-      <span class="kw">JWST / NIRSpec</span>
-      <span class="kw">ALMA</span>
-      <span class="kw">ELT / HARMONI</span>
       <span class="kw">Nuclear Star Clusters</span>
       <span class="kw">Dwarf Galaxies</span>
       <span class="kw">Gravitational Lensing</span>
@@ -111,21 +77,75 @@
   </div>
 </section>
 
-<style>
-.kw {
-  display: inline-block;
-  background: var(--accent-dim);
-  border: 1px solid var(--border);
-  color: var(--text-light);
-  font-size: .78rem;
-  font-weight: 500;
-  letter-spacing: .06em;
-  padding: .35rem .9rem;
-  border-radius: 99px;
-}
-</style>
+<!-- ── Facilities ── -->
+<section class="section" id="facilities">
+  <div class="section-inner">
 
-<!-- ── Footer ── -->
+    <!-- Current -->
+    <div class="section-header">
+      <span class="section-label">Observatories</span>
+      <h2 class="section-title">Facilities &amp; Instruments</h2>
+      <div class="divider"></div>
+      <p class="section-desc">Telescopes and instruments actively used in our ongoing research.</p>
+    </div>
+
+    <div style="font-size:.7rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--text-muted); margin-bottom:1rem;">
+      Currently Active
+    </div>
+    <div class="facility-grid" style="margin-bottom:3rem;">
+
+      <div class="facility-card anim">
+        <div class="facility-badge current">Current</div>
+        <div class="facility-icon"><i class="fas fa-broadcast-tower"></i></div>
+        <div class="facility-name">Atacama Large Millimeter/submillimeter Array</div>
+        <div class="facility-abbr">ALMA · Chile</div>
+        <div class="facility-desc">66 high-precision antennas that capture the emission of cold molecular gas and dust. We use ALMA to trace the rotation of gas under a black hole's gravitational influence — allowing us to indirectly measure the central dark mass without ever "seeing" the BH directly.</div>
+      </div>
+
+      <div class="facility-card anim" style="animation-delay:.08s">
+        <div class="facility-badge current">Current</div>
+        <div class="facility-icon"><i class="fas fa-space-shuttle"></i></div>
+        <div class="facility-name">James Webb Space Telescope</div>
+        <div class="facility-abbr">JWST · Sun–Earth L2</div>
+        <div class="facility-desc">Launched in 2021, JWST carries NIRCam, NIRSpec, MIRI, and FGS/NIRISS — enabling high-resolution infrared spectroscopy of faint, distant objects. We primarily use NIRSpec integral-field data to measure stellar kinematics inside compact galactic cores, placing tight constraints on BH parameters.</div>
+      </div>
+
+      <div class="facility-card anim" style="animation-delay:.16s">
+        <div class="facility-badge current">Current</div>
+        <div class="facility-icon"><i class="fas fa-mountain"></i></div>
+        <div class="facility-name">W. M. Keck Observatory</div>
+        <div class="facility-abbr">Keck · Mauna Kea, Hawai'i</div>
+        <div class="facility-desc">Two 10-meter telescopes atop Mauna Kea equipped with advanced adaptive optics and instruments including OSIRIS and KCWI. We use Keck to zoom deep into the bright, dense nuclear star clusters of nearby galaxies and to derive stellar population and dark matter properties.</div>
+      </div>
+
+    </div>
+
+    <div style="font-size:.7rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--text-muted); margin-bottom:1rem;">
+      Next-Generation Facilities
+    </div>
+    <div class="facility-grid">
+
+      <div class="facility-card future anim" style="animation-delay:.24s">
+        <div class="facility-badge future">Future</div>
+        <div class="facility-icon"><i class="fas fa-circle-nodes"></i></div>
+        <div class="facility-name">Extremely Large Telescope</div>
+        <div class="facility-abbr">ELT / HARMONI &amp; MICADO · Chile</div>
+        <div class="facility-desc">Currently under construction in Chile, the ELT's 39-meter primary mirror and laser guide star adaptive optics will make it the largest optical/infrared telescope in the world. We use HARMONI and MICADO simulation software to generate mock spectroscopy cubes, evaluate BH measurement strategies, and forecast IMBH science cases.</div>
+      </div>
+
+      <div class="facility-card future anim" style="animation-delay:.32s">
+        <div class="facility-badge future">Future</div>
+        <div class="facility-icon"><i class="fas fa-star-of-life"></i></div>
+        <div class="facility-name">Giant Magellan Telescope</div>
+        <div class="facility-abbr">GMT · Las Campanas, Chile</div>
+        <div class="facility-desc">Another next-generation ground-based telescope under construction at Las Campanas Observatory. With seven primary mirror segments and a 25-meter effective aperture, GMT will complement ELT for high-resolution spectroscopic studies of black holes and their host galaxies in the southern sky.</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="footer-inner">
     <span class="footer-copy">Copyright &copy; Nguyen et al. 2026</span>
@@ -133,39 +153,23 @@
   </div>
 </footer>
 
-<!-- ── Modals ── -->
-
-<!-- Black Hole Modal -->
+<!-- BH Modal -->
 <div class="modal fade" id="modal_bh" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header" style="border-bottom:1px solid var(--border); padding:1.5rem;">
-        <h2 class="modal-title" style="font-family:'Playfair Display',serif; color:#fff; font-size:1.4rem;">Black Hole Physics</h2>
+        <h2 class="modal-title" style="font-size:1.3rem;">Black Hole Physics</h2>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body" style="padding:2rem;">
-        <p style="color:var(--accent); font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:1.25rem;">
-          Research on the formation and growth of galactic black holes
-        </p>
-        <img class="img-fluid rounded mb-3" src="assets/img/portfolio/bh.jpg" alt="Black hole" />
-        <p style="font-size:.8rem; color:var(--text-muted); margin-bottom:1.25rem;"><em>Image source: EHT Collaboration.</em></p>
-        <p style="color:var(--text-muted); margin-bottom:1rem;">
-          Black holes (BHs) are one of the most mysterious objects in the universe. Theory showed they form from gravitational 
-          collapse of massive stars; observations also showed that galaxies can host supermassive black holes (SMBHs) in their core. 
-          How exactly do they evolve and settle in the galaxy nucleus? We use imaging and spectroscopy data from various facilities 
-          (such as HST, JWST, ALMA, ELT) to extract information from the environment around extragalactic BHs. We apply analysis 
-          techniques such as stellar kinematics and gas dynamics to probe the BH's influence and model its properties. We are also 
-          exploring gravitational lensing as a way to extend our reach to even more distant and ancient galaxies.
-        </p>
-        <p style="color:var(--text-muted);">
-          Our work focuses on measuring SMBHs and hunting for intermediate-mass black holes (IMBHs) — the missing pieces 
-          in our understanding of BH growth. Key questions include: What is the origin of BH seeds in the early universe? 
-          How do SMBHs evolve from stellar mass? What do IMBHs tell us about the BH evolution chain? 
-          How can next-generation telescopes probe the properties of IMBHs?
-        </p>
+        <p style="color:var(--accent); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:1.25rem;">Formation and growth of galactic black holes</p>
+        <img class="img-fluid rounded mb-2" src="assets/img/portfolio/bh.jpg" alt="Black hole" />
+        <p style="font-size:.78rem; color:var(--text-muted); margin-bottom:1.25rem;"><em>Image: EHT Collaboration</em></p>
+        <p style="color:var(--text-muted); margin-bottom:1rem;">Black holes (BHs) are one of the most mysterious objects in the universe. Theory showed they form from gravitational collapse of massive stars; observations also showed that galaxies can host supermassive black holes (SMBHs) in their core. How exactly do they evolve and settle in the galaxy nucleus?</p>
+        <p style="color:var(--text-muted);">We use imaging and spectroscopy data from various facilities (HST, JWST, ALMA, ELT) to extract information from the environment around extragalactic BHs. We apply stellar kinematics and gas dynamics to probe the BH's influence and model its properties. Our work focuses on measuring SMBHs and hunting for intermediate-mass black holes (IMBHs) — the missing link in our understanding of BH growth.</p>
       </div>
       <div class="modal-footer" style="border-top:1px solid var(--border);">
-        <button class="hero-cta" data-bs-dismiss="modal" style="font-size:.8rem; padding:.65rem 1.5rem;">Close</button>
+        <button class="hero-cta" data-bs-dismiss="modal" style="font-size:.78rem; padding:.6rem 1.4rem;">Close</button>
       </div>
     </div>
   </div>
@@ -176,107 +180,25 @@
   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header" style="border-bottom:1px solid var(--border); padding:1.5rem;">
-        <h2 class="modal-title" style="font-family:'Playfair Display',serif; color:#fff; font-size:1.4rem;">Galaxy Evolution</h2>
+        <h2 class="modal-title" style="font-size:1.3rem;">Galaxy Evolution</h2>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body" style="padding:2rem;">
-        <p style="color:var(--accent); font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:1.25rem;">
-          Research on the evolution and properties of galactic bodies
-        </p>
+        <p style="color:var(--accent); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:1.25rem;">Evolution and properties of galactic bodies</p>
         <img class="img-fluid rounded mb-3" src="assets/img/portfolio/gals.jpg" alt="Galaxies" />
-        <p style="color:var(--text-muted); margin-bottom:1rem;">
-          Galaxies are large and complex systems composed of stars, dust, and matter. We live in one — the Milky Way — 
-          and look beyond it to find an impressive variety of systems with different shapes and sizes. BHs can reside 
-          in the compact cores of galaxies, including our own. These galactic BHs exert gravitational influences that 
-          consume nearby stars, alter their movements, and sometimes eject gas and matter into the circumgalactic medium 
-          through powerful jets. Such feedback can heavily affect the global properties of galaxies.
-        </p>
-        <p style="color:var(--text-muted); margin-bottom:1.5rem;">
-          By probing deep into the galactic core and studying the BH inside, we aim to establish a better understanding 
-          of how BHs co-evolve with their host galaxies. We are also interested in how galaxies of different mass scales 
-          evolved by analysing their stellar population and the dynamics of their components.
-        </p>
-        <p style="color:var(--accent); font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:.5rem;">Key words</p>
+        <p style="color:var(--text-muted); margin-bottom:1rem;">Galaxies are large and complex systems composed of stars, dust, and matter. BHs residing in compact galactic cores exert gravitational influences that consume nearby stars, alter their movements, and sometimes eject gas into the circumgalactic medium through powerful jets — heavily affecting global galaxy properties.</p>
+        <p style="color:var(--text-muted); margin-bottom:1.5rem;">By studying the BH inside galactic cores, we aim to understand how BHs co-evolve with their host galaxies. We are also interested in galaxies of different mass scales, analysing their stellar populations and component dynamics.</p>
+        <p style="color:var(--accent); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:.4rem;">Key words</p>
         <p style="color:var(--text-muted);">Dwarf galaxies · Active galactic nuclei · Nuclear star clusters · Morphology</p>
       </div>
       <div class="modal-footer" style="border-top:1px solid var(--border);">
-        <button class="hero-cta" data-bs-dismiss="modal" style="font-size:.8rem; padding:.65rem 1.5rem;">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Facilities Modal -->
-<div class="modal fade" id="modal_facilities" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header" style="border-bottom:1px solid var(--border); padding:1.5rem;">
-        <h2 class="modal-title" style="font-family:'Playfair Display',serif; color:#fff; font-size:1.4rem;">Facilities &amp; Instruments</h2>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body" style="padding:2rem;">
-        <p style="color:var(--accent); font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:1.25rem;">
-          Main telescopes used in our works
-        </p>
-        <img class="img-fluid rounded mb-3" src="assets/img/portfolio/facilities_names.jpg" alt="Facilities" />
-
-        <div style="margin-bottom:1.5rem;">
-          <div style="color:var(--accent); font-weight:600; margin-bottom:.35rem;">Atacama Large Millimeter/submillimeter Array (ALMA)</div>
-          <p style="color:var(--text-muted);">
-            ALMA is a large radio telescope array situated in Chile. Its 66 antennas collect signals across a broad range of frequencies, 
-            capturing the emission of cold gas and dust. Using ALMA data, we extract the movement of molecular gas under a black hole's 
-            gravitational influence — allowing us to indirectly "see" the central black hole and derive its properties.
-          </p>
-        </div>
-
-        <div style="margin-bottom:1.5rem;">
-          <div style="color:var(--accent); font-weight:600; margin-bottom:.35rem;">James Webb Space Telescope (JWST)</div>
-          <p style="color:var(--text-muted);">
-            Launched in 2021 and situated at the Sun–Earth L2 point, JWST carries instruments designed to observe the infrared 
-            range — NIRCam, NIRSpec, MIRI, and FGS/NIRISS. These enable high-resolution imaging and spectroscopy of faint, 
-            distant objects. With JWST we probe stellar kinematics inside compact galactic cores for better constraints on BH parameters.
-          </p>
-        </div>
-
-        <div style="margin-bottom:1.5rem;">
-          <div style="color:var(--accent); font-weight:600; margin-bottom:.35rem;">ESO's Extremely Large Telescope (ELT)</div>
-          <p style="color:var(--text-muted);">
-            Currently under construction in Chile, the ELT's 39-meter primary mirror and adaptive optics will make it the 
-            largest telescope in the world. Our current work uses simulation software to generate mock spectroscopy cubes from 
-            the HARMONI and MICADO instruments — assessing ELT's performance and evaluating strategies for finding IMBHs.
-          </p>
-        </div>
-
-        <div style="margin-bottom:1.5rem;">
-          <div style="color:var(--accent); font-weight:600; margin-bottom:.35rem;">Keck Observatory</div>
-          <p style="color:var(--text-muted);">
-            Two telescopes located atop Mauna Kea, equipped with advanced adaptive optics and instruments like OSIRIS and KCWI. 
-            We use Keck to zoom into the bright and dense nuclear star clusters of nearby galaxies and to derive stellar 
-            population and dark matter properties.
-          </p>
-        </div>
-
-        <div>
-          <div style="color:var(--accent); font-weight:600; margin-bottom:.35rem;">Giant Magellan Telescope (GMT)</div>
-          <p style="color:var(--text-muted);">
-            Another next-generation ground-based telescope currently under construction in Chile — part of the future landscape 
-            for our observational campaigns.
-          </p>
-        </div>
-      </div>
-      <div class="modal-footer" style="border-top:1px solid var(--border);">
-        <button class="hero-cta" data-bs-dismiss="modal" style="font-size:.8rem; padding:.65rem 1.5rem;">Close</button>
+        <button class="hero-cta" data-bs-dismiss="modal" style="font-size:.78rem; padding:.6rem 1.4rem;">Close</button>
       </div>
     </div>
   </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.anim').forEach(el => observer.observe(el));
-</script>
+<script src="nav.js"></script>
 </body>
 </html>
