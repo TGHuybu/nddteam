@@ -256,9 +256,10 @@ img { max-width: 100%; display: block; }
   transition: border-color .2s, box-shadow .2s;
 }
 .pub-item:hover { border-color: rgba(255,200,0,.3); box-shadow: 0 4px 20px rgba(0,0,0,.3); }
-.pub-authors { color: var(--text-muted); font-size: .84rem; margin-bottom: .3rem; }
-.pub-title { color: var(--text-light); font-size: .93rem; font-style: italic; margin-bottom: .3rem; line-height: 1.5; }
-.pub-journal a { color: var(--accent); font-size: .8rem; font-weight: 600; font-family: 'DM Mono', monospace; }
+.pub-authors { color: var(--text-muted); font-size: .85rem; margin-bottom: .3rem; }
+.pub-authors strong { color: var(--text); font-size: .85rem; margin-bottom: .3rem; }
+.pub-title { color: var(--text); font-size: .95rem; font-style: italic; margin-bottom: .3rem; line-height: 1.5; }
+.pub-journal a { color: var(--accent); font-size: .82rem; font-weight: 600; font-family: 'DM Mono', monospace; }
 
 /* ── PROJECTS ── */
 .project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
