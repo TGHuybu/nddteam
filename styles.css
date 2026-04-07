@@ -163,13 +163,13 @@ img { max-width: 100%; display: block; }
 .team-card.pi { border-color: rgba(255,200,0,.2); }
 
 .team-card-avatar {
-  width: 96px; height: 96px; border-radius: 50%; object-fit: cover;
+  width: 125px; height: 125px; border-radius: 50%; object-fit: cover;
   border: 2px solid var(--border); margin: 0 auto 1.2rem;
   transition: border-color .25s;
 }
-.team-card.pi .team-card-avatar { width: 110px; height: 110px; }
+.team-card.pi .team-card-avatar { width: 130px; height: 130px; }
 .team-card:hover .team-card-avatar { border-color: var(--accent); }
-.team-card-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: #fff; margin-bottom: .4rem; }
+.team-card-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #fff; margin-bottom: .4rem; }
 .team-card.pi .team-card-name { font-size: 1.2rem; }
 .team-card-name a { color: inherit; }
 .team-card-name a:hover { color: var(--accent); opacity: 1; }
@@ -262,7 +262,7 @@ img { max-width: 100%; display: block; }
 .pub-journal a { color: var(--accent); font-size: .82rem; font-weight: 600; font-family: 'DM Mono', monospace; }
 
 /* ── PROJECTS ── */
-.project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+.project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 .project-card {
   background: var(--bg-card); border: 1px solid var(--border);
   border-radius: var(--radius); overflow: hidden;
