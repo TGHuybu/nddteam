@@ -206,7 +206,7 @@ img { max-width: 100%; display: block; }
 .news-card-summary { color: var(--text-muted); font-size: .87rem; }
 
 /* ── RESEARCH CARDS ── */
-.research-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.75rem; }
+.research-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.75rem; }
 .research-card {
   background: var(--bg-card); border: 1px solid var(--border);
   border-radius: var(--radius); overflow: hidden; cursor: pointer;
@@ -312,6 +312,7 @@ img { max-width: 100%; display: block; }
 .modal-body h2 { font-family: 'Playfair Display', serif; color: #fff; }
 .modal-body p { color: var(--text-muted); }
 .modal-body .item-intro { color: var(--text-muted) !important; }
+.modal-body img { width: 100%;}
 
 /* ── FOOTER ── */
 .site-footer { background: var(--bg-card); border-top: 1px solid var(--border); padding: 2.25rem 0; }
