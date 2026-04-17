@@ -48,12 +48,13 @@
 
       <!-- PROJECT TEMPLATE — duplicate and fill in -->
       <div class="project-card anim" data-bs-toggle="modal" data-bs-target="#modal_imbh">
-        <img class="project-card-img" src="assets/img/portfolio/bh.jpg" alt="Black hole" />
+        <img class="project-card-img" src="assets/img/projects/imbh/Nguyen_2025_AJ_170_124.png" alt="Black hole" />
         <div class="project-card-body">
           <div class="project-card-status active">Active</div>
           <div class="project-card-title">Intermediate-mass Black Holes in Nearby Dwarf Galaxies</div>
           <div class="project-card-desc">
-            [Under construction]
+            Black holes with masses between 10<sup>2</sup> and 10<sup>5</sup> solar masses can help us 
+            understand how SMBHs form and grow inside galaxy cores.
           </div>
           <!-- <div class="project-card-meta">
             <span class="project-tag">JWST</span>
@@ -88,10 +89,12 @@
         <div class="project-card-body">
           <div class="project-card-status active">Active</div>
           <div class="project-card-title">
-            Simulating Black Hole Observations with the ELT
+            Simulating Black Hole Observations with the 39-meter Extremely Large Telescope
           </div>
           <div class="project-card-desc">
-            [Under construction]
+            The ELT is currently under construction in Chile. Using advanced simulation software, we can 
+            produce realistic mock observations with the ELT's instruments, allowing us to assess its 
+            science capabilities.
           </div>
           <!-- <div class="project-card-meta">
             <span class="project-tag">ALMA</span>
@@ -193,21 +196,28 @@
         <p style="color:var(--accent); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:1.25rem;">
           IMBH Project
         </p>
+        <img class="img-fluid rounded mb-3" src="assets/img/projects/imbh/Nguyen_2025_AJ_170_124.png" alt="IMBH Sample" />
+        <p style="font-size:.78rem; color:var(--text-muted); margin-bottom:1.25rem;">
+          <em>
+            Some of the prominent nearby NSC-hosting galaxies, which are potential candidates for future 
+            IMBH studies with next-generation instruments. Image source: Figure 1 of 
+            <a href="https://doi.org/10.3847/1538-3881/ade9ba" target="_blank">Nguyen et al. 2025, AJ, 170, 124</a>
+          </em>
+        </p>
         <p style="color:var(--text-muted); margin-bottom:1rem;">
           Identifying and studying intermediate-mass black holes (IMBHs) is crucial for constraining 
           black hole seed formation scenarios and understanding its growth inside galactic cores. Yet, 
           IMBHs remain difficult to detect and measure, due to their small gravitational sphere of influence. 
-          In this project, we use state-of-the-art instruments and techniques (namely ...) to uncover the population of IMBHs in 
+          One of the promising ways to look for IMBHs is to search for their signatures in the dense 
+          nuclear star cluster regions of nearby galaxies. 
+          In this project, we use state-of-the-art instruments and techniques (namely stellar kinematics 
+          with JWST/NIRSpec and gas dynamics with ALMA) to uncover the population of IMBHs in 
           nearby dwarf galaxies, and to measure their masses and host galaxy properties.
-        </p>
-        <p style="color:var(--text-muted); margin-bottom:1.5rem;">
-          We are also involved in scientific planning for the upcoming ELT, using mock observations to 
-          assert its capabilities for IMBH detection. 
         </p>
         <p style="color:var(--accent); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:.4rem;">
           Key Instruments & Facilities
         </p>
-        <!-- <p style="color:var(--text-muted);">JWST · NIRSpec · Spectroscopy</p> -->
+        <p style="color:var(--text-muted);">JWST · HST · ALMA · VLT</p>
       </div>
       <div class="modal-footer" style="border-top:1px solid var(--border);">
         <button class="hero-cta" data-bs-dismiss="modal" style="font-size:.78rem; padding:.6rem 1.4rem;">Close</button>
@@ -238,6 +248,63 @@
         </p>
         <p style="color:var(--accent); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:.4rem;">
           Key Instruments & Facilities
+        </p>
+        <!-- <p style="color:var(--text-muted);">ALMA · Molecular Gas · Gas Dynamics</p> -->
+      </div>
+      <div class="modal-footer" style="border-top:1px solid var(--border);">
+        <button class="hero-cta" data-bs-dismiss="modal" style="font-size:.78rem; padding:.6rem 1.4rem;">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Project ELT simulation -->
+<div class="modal fade" id="modal_ELTsim" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header" style="border-bottom:1px solid var(--border); padding:1.5rem;">
+        <h2 class="modal-title" style="font-size:1.3rem;">
+          Simulating Black Hole Observations with the ELT
+        </h2>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="padding:2rem;">
+        <p style="color:var(--accent); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:1.25rem;">
+          ELT Simulation Project
+        </p>
+        <img class="img-fluid rounded mb-3" src="assets/img/portfolio/elt.jpg" alt="IMBH Sample" />
+        <p style="font-size:.78rem; color:var(--text-muted); margin-bottom:1.25rem;">
+          <em>
+            Image: European Southern Observatory (ESO)
+          </em>
+        </p>
+        <p style="color:var(--text-muted); margin-bottom:2rem;">
+          The upcoming ELT's state-of-the-art instruments, namely the HARMONI field spectrograph 
+          and the MICADO imager will offer unprecedented power to resolve black holes' influences 
+          deep inside galaxy cores. To assert the ELT's capabilities for black hole science, 
+          we are actively conducting detailed simulations of intermediate-mass and 
+          supermassive black holes observations, using specialized softwares such as the HSIM pipeline 
+          and SimCADO package.
+        </p>
+
+        <img class="img-fluid rounded mb-3" src="assets/img/projects/elt_sim/mock_micado.png" alt="Lensing" />
+        <p style="font-size:.78rem; color:var(--text-muted); margin-bottom:2rem;">
+          <em>
+            Mock ELT/MICADO images of 5 galaxies, produced using the SimCADO package. 
+            Image source: Figure 4 of 
+            <a href="https://doi.org/10.1093/mnras/stag238" target="_blank">Nguyen et al. 2026, MNRAS, 546(4), 1–19</a>
+          </em>
+        </p>
+
+        <img class="img-fluid rounded mb-3" src="assets/img/projects/elt_sim/ngc3115dw1_stellar_kin_maps_harmoni_mock.png" alt="Lensing" />
+        <p style="font-size:.78rem; color:var(--text-muted); margin-bottom:2rem;">
+          <em>
+            Stellar kinematics maps for the nucleus of NGC 3115 dw01, 
+            derived from mock ELT/HARMONI H-high IFS observations. 
+            Image source: Figure 9 of 
+            <a href="https://doi.org/10.3847/1538-3881/ade9ba" target="_blank">Nguyen et al. 2025, AJ, 170, 124</a>
+          </em>
         </p>
         <!-- <p style="color:var(--text-muted);">ALMA · Molecular Gas · Gas Dynamics</p> -->
       </div>
