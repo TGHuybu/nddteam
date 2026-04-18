@@ -233,7 +233,7 @@ img { max-width: 100%; display: block; }
 }
 .facility-card:hover { border-color: rgba(255,200,0,.3); box-shadow: var(--shadow); }
 .facility-card.future { border-style: dashed; }
-.facility-icon { font-size: 1.5rem; color: var(--accent); margin-bottom: .75rem; }
+.facility-card-img { width: 100%; aspect-ratio: 3/2; object-fit: cover; display: block; margin-bottom: .75rem; }
 .facility-name { color: #fff; font-weight: 600; font-size: .95rem; margin-bottom: .5rem; }
 .facility-abbr { color: var(--accent); font-family: 'DM Mono', monospace; font-size: .75rem; font-weight: 500; margin-bottom: .75rem; }
 .facility-desc { color: var(--text-muted); font-size: .85rem; line-height: 1.65; }
