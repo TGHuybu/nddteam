@@ -245,6 +245,14 @@ img { max-width: 100%; display: block; }
 .facility-badge.future { background: rgba(255,200,0,.1); color: var(--accent); border: 1px solid var(--border); }
 
 /* ── PUBLICATIONS ── */
+.pub-container { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.pub-list-container { display: flex; flex-direction: column; max-height: 80vh; overflow-y: auto; }
+.pub-summary-panel { 
+  padding: 2rem; 
+  border-left: 1px solid var(--border); 
+  overflow-y: auto; 
+  max-height: 80vh;
+}
 .pub-year-group { margin-bottom: 2.75rem; }
 .pub-year-label {
   font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--accent);
@@ -253,13 +261,69 @@ img { max-width: 100%; display: block; }
 .pub-item {
   background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px;
   padding: 1.1rem 1.4rem; margin-bottom: .75rem;
-  transition: border-color .2s, box-shadow .2s;
+  transition: border-color .2s, box-shadow .2s, background-color .2s;
+  cursor: pointer;
 }
 .pub-item:hover { border-color: rgba(255,200,0,.3); box-shadow: 0 4px 20px rgba(0,0,0,.3); }
+.pub-item.active { border-color: var(--accent); box-shadow: 0 4px 20px rgba(255,200,0,.2); background-color: var(--bg-card2); }
 .pub-authors { color: var(--text-muted); font-size: .85rem; margin-bottom: .3rem; }
 .pub-authors strong { color: var(--text); font-size: .85rem; margin-bottom: .3rem; }
 .pub-title { color: var(--text); font-size: .95rem; font-style: italic; margin-bottom: .3rem; line-height: 1.5; }
 .pub-journal a { color: var(--accent); font-size: .82rem; font-weight: 600; font-family: 'DM Mono', monospace; }
+
+/* Summary Panel Styles */
+.pub-summary-placeholder { text-align: center; padding: 3rem 1rem; color: var(--text-muted); }
+.placeholder-text { font-size: .95rem; }
+.summary-header { margin-bottom: 1.5rem; }
+.summary-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--text); margin-bottom: .5rem; }
+.summary-authors { color: var(--text-muted); font-size: .85rem; margin: 0; }
+.summary-journal { color: var(--text-muted); font-size: .85rem; margin-bottom: 1.5rem; }
+.summary-journal a { color: var(--accent); text-decoration: none; }
+.summary-journal a:hover { opacity: .75; }
+.summary-section-title { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--accent); margin-top: 1.5rem; margin-bottom: .75rem; }
+
+/* Sequential content rendering */
+.content-sequence { margin-top: 1.5rem; }
+.content-text { 
+  color: var(--text-muted); 
+  font-size: 0.9rem; 
+  line-height: 1.6; 
+  margin-bottom: 1.5rem;
+}
+.content-figure { 
+  margin-bottom: 2rem;
+}
+.figure-image { 
+  width: 100%; 
+  border-radius: 8px; 
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--border);
+}
+.figure-caption { 
+  font-size: 0.8rem; 
+  color: var(--text-muted); 
+  font-style: italic; 
+  margin: 0;
+}
+.summary-links { margin-top: 1.5rem; }
+.summary-link { 
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s;
+}
+.summary-link:hover { border-bottom-color: var(--accent); }
+
+/* Mobile: Hide summary panel on screens <768px */
+@media (max-width: 767px) {
+  .pub-container { grid-template-columns: 1fr; gap: 0; }
+  .pub-list-container { max-height: none; }
+  .pub-summary-panel { display: none; border-left: none; }
+}
 
 /* ── PROJECTS ── */
 .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
