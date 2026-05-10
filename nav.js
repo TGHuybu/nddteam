@@ -99,7 +99,7 @@ function updateSummaryPanel(pubElement, pubId) {
   if (summaryPlaceholder) summaryPlaceholder.style.display = 'none';
 
   // If no data found, show "no summary available" message
-  if (!data) {
+  if (!data || !data.content || data.content.length === 0) {
     const summaryBody = summaryContent.querySelector('.summary-body');
     if (summaryBody) {
       const oldSequence = summaryBody.querySelector('.content-sequence');
@@ -159,19 +159,5 @@ function updateSummaryPanel(pubElement, pubId) {
         summaryBody.appendChild(contentContainer);
       }
     }
-  }
-
-  // Update additional links
-  const summaryLinks = summaryContent.querySelector('.summary-links');
-  if (summaryLinks && data.additionalLinks && data.additionalLinks.length > 0) {
-    summaryLinks.innerHTML = '';
-    data.additionalLinks.forEach(link => {
-      const linkEl = document.createElement('a');
-      linkEl.href = link.url;
-      linkEl.target = '_blank';
-      linkEl.className = 'summary-link';
-      linkEl.textContent = link.text;
-      summaryLinks.appendChild(linkEl);
-    });
   }
 }
