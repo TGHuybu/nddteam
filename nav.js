@@ -15,12 +15,6 @@ if (toggle && links) {
   });
 }
 
-// Scroll reveal
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.08 });
-document.querySelectorAll('.anim').forEach(el => observer.observe(el));
-
 // Publications list interaction
 document.addEventListener('DOMContentLoaded', () => {
   const pubItems = document.querySelectorAll('.pub-item[data-pub-id]');
