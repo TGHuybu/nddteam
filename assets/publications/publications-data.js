@@ -18,7 +18,7 @@ const publicationsData = {
       }
     ]
   },
-  'Nguyen_et_al_2026_arXiv_2601_17439': {
+  'Nguyen_et_al_2026_ApJ_1003-1_98': {
     "content": [
       {
         "type": "text",
