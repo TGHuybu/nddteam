@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seminars — Galaxy Dynamics Lab</title>
+  <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand"><span class="brand-dot"></span>Galaxy Dynamics Lab</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#news">News</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="seminars.html" class="active">Seminars</a></li>
+      <li><a href="publications.html">Publications</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="section-inner">
+    <span class="section-label">Events</span>
+    <h1 class="section-title">Seminars & Talks</h1>
+    <div class="divider"></div>
+    <p class="section-desc">
+      Future and past talks by guest speakers from 
+      leading research institutions around the world.
+    </p>
+  </div>
+</div>
+
+<!-- ── Seminars Grid ── -->
+<section class="section">
+  <div class="section-inner">
+    <div class="research-grid" id="seminarsGrid">
+      <!-- Seminars will be populated here by JavaScript -->
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-copy">Copyright &copy; Nguyen et al. 2026</span>
+    <span class="footer-brand">Galaxy Dynamics Lab</span>
+  </div>
+</footer>
+
+<!-- Seminar Modals will be populated here by JavaScript -->
+<div id="modalsContainer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="nav.js"></script>
+<script src="assets/seminars/seminars-data.js"></script>
+<script>
+  // Populate seminars grid and modals from data
+  document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.getElementById('seminarsGrid');
+    const modalsContainer = document.getElementById('modalsContainer');
+
+    if (!grid || !seminarsData) return;
+
+    // Create a date formatter
+    const formatDate = (dateStr) => {
+      const date = new Date(dateStr + 'T00:00:00');
+      return date.toLocaleDateString('en-US', { 
+        month: 'short', 
+        day: 'numeric', 
+        year: 'numeric' 
+      });
+    };
+
+    // Sort seminars by date (newest first)
+    const seminarIds = Object.keys(seminarsData).sort((a, b) => {
+      const dateA = new Date(seminarsData[a].date);
+      const dateB = new Date(seminarsData[b].date);
+      return dateB - dateA;
+    });
+
+    // Create cards and modals
+    seminarIds.forEach(seminarId => {
+      const seminar = seminarsData[seminarId];
+      const modalId = `modal_${seminarId}`;
+
+      // Determine if seminar is upcoming or previous
+      const seminarDate = new Date(seminar.date + 'T00:00:00');
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const isUpcoming = seminarDate >= today;
+      const statusBadgeClass = isUpcoming ? 'upcoming' : 'previous';
+      const statusText = isUpcoming ? 'Upcoming' : 'Previous';
+
+      // Create card
+      const card = document.createElement('div');
+      card.className = 'research-card';
+      card.setAttribute('data-bs-toggle', 'modal');
+      card.setAttribute('data-bs-target', `#${modalId}`);
+      card.style.cursor = 'pointer';
+
+      card.innerHTML = `
+        <div class="research-card-body">
+          <div class="project-card-status ${statusBadgeClass}">${statusText}</div>
+          <div class="research-card-title">${seminar.title}</div>
+          <div class="research-card-desc" style="margin-bottom:0.75rem;">
+            <strong>${seminar.speaker_name}</strong><br>
+            <span style="font-size:0.95em; color:var(--text-muted);">${seminar.speaker_affiliation}</span>
+          </div>
+          <div class="research-card-desc" style="font-size:0.9em; margin-bottom:0;">
+            📅 ${formatDate(seminar.date)}<br>
+            🕐 ${seminar.time}<br>
+            📍 ${seminar.venue}
+          </div>
+          <div class="research-card-btn">Learn More</div>
+        </div>
+      `;
+      grid.appendChild(card);
+
+      // Create modal
+      const externalLinksHtml = seminar.external_links && seminar.external_links.length > 0
+        ? `
+          <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+            <p style="color:var(--accent); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:.75rem;">Links</p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              ${seminar.external_links.map(link => `
+                <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="hero-cta" style="font-size:.78rem; padding:.6rem 1.4rem; text-decoration:none;">${link.label}</a>
+              `).join('')}
+            </div>
+          </div>
+        `
+        : '';
+
+      const modal = document.createElement('div');
+      modal.className = 'modal fade';
+      modal.id = modalId;
+      modal.setAttribute('tabindex', '-1');
+      modal.setAttribute('aria-hidden', 'true');
+
+      modal.innerHTML = `
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header" style="border-bottom:1px solid var(--border); padding:1.5rem;">
+              <h2 class="modal-title" style="font-size:1.3rem;">${seminar.title}</h2>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" style="padding:2rem;">
+              <p style="color:var(--accent); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:1.25rem;">
+                Speaker Information
+              </p>
+              <p style="color:var(--text-muted); margin-bottom:0.5rem;">
+                <strong style="color:var(--text); font-size:1rem;">${seminar.speaker_name}</strong>
+              </p>
+              <p style="color:var(--text-muted); margin-bottom:1.5rem;">
+                ${seminar.speaker_affiliation}
+              </p>
+              
+              <p style="color:var(--accent); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:1rem;">
+                Event Details
+              </p>
+              <div style="background: var(--bg-card); padding: 1rem; border-radius: 8px; border: 1px solid var(--border); margin-bottom:1.5rem;">
+                <p style="color:var(--text-muted); margin: 0.5rem 0;">
+                  <strong>Date:</strong> ${formatDate(seminar.date)}
+                </p>
+                <p style="color:var(--text-muted); margin: 0.5rem 0;">
+                  <strong>Time:</strong> ${seminar.time}
+                </p>
+                <p style="color:var(--text-muted); margin: 0.5rem 0;">
+                  <strong>Venue:</strong> ${seminar.venue}
+                </p>
+              </div>
+
+              <p style="color:var(--accent); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:1rem;">
+                Abstract
+              </p>
+              <p style="color:var(--text-muted); line-height: 1.6;">
+                ${seminar.abstract}
+              </p>
+
+              ${externalLinksHtml}
+            </div>
+            <div class="modal-footer" style="border-top:1px solid var(--border);">
+              <button class="hero-cta" data-bs-dismiss="modal" style="font-size:.78rem; padding:.6rem 1.4rem;">Close</button>
+            </div>
+          </div>
+        </div>
+      `;
+      modalsContainer.appendChild(modal);
+    });
+  });
+</script>
+</body>
+</html>

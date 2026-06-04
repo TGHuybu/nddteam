@@ -341,6 +341,7 @@ img { max-width: 100%; display: block; }
 }
 .project-card-status.active { background: rgba(50,180,80,.15); color: #50c870; border: 1px solid rgba(50,180,80,.2); }
 .project-card-status.upcoming { background: rgba(255,200,0,.1); color: var(--accent); border: 1px solid var(--border); }
+.project-card-status.previous { background: rgba(125,150,176,.1); color: var(--text-muted); border: 1px solid rgba(125,150,176,.2); }
 .project-card-status.placeholder { background: rgba(100,120,140,.1); color: var(--text-muted); border: 1px solid rgba(100,120,140,.15); }
 .project-card-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #fff; margin-bottom: .6rem; }
 .project-card-desc { color: var(--text-muted); font-size: .87rem; line-height: 1.65; margin-bottom: 1rem; }
