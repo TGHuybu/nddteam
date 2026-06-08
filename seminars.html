@@ -132,7 +132,7 @@
       const seminar = seminarsData[seminarId];
       const modalId = `modal_${seminarId}`;
 
-      // Điểm mấu chốt: Lấy ảnh từ trường dữ liệu "image", nếu trống sẽ fallback về ảnh trống placeholder
+      // ĐÃ SỬA LỖI: seminarImg
       const seminarImg = seminar.image || 'https://placehold.co/600x400?text=No+Image';
 
       // Determine if seminar is upcoming or previous
@@ -143,16 +143,17 @@
       const statusBadgeClass = isUpcoming ? 'upcoming' : 'previous';
       const statusText = isUpcoming ? 'Upcoming' : 'Previous';
 
-      // Create card (Đã thêm class bao bọc hình ảnh lên đầu card)
+      // Create card 
       const card = document.createElement('div');
       card.className = 'research-card';
       card.setAttribute('data-bs-toggle', 'modal');
       card.setAttribute('data-bs-target', `#${modalId}`);
       card.style.cursor = 'pointer';
 
+      // ĐÃ SỬA LỖI: Đổi ${seminImg} thành ${seminarImg}
       card.innerHTML = `
         <div class="research-card-banner">
-          <img src="${seminImg}" alt="${seminar.title}">
+          <img src="${seminarImg}" alt="${seminar.title}">
         </div>
         <div class="research-card-body">
           <div class="project-card-status ${statusBadgeClass}">${statusText}</div>
@@ -191,6 +192,7 @@
       modal.setAttribute('tabindex', '-1');
       modal.setAttribute('aria-hidden', 'true');
 
+      // ĐÃ SỬA LỖI: Đổi ${seminImg} thành ${seminarImg}
       modal.innerHTML = `
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
@@ -201,7 +203,7 @@
             <div class="modal-body" style="padding:2rem;">
               
               <div class="modal-poster-container">
-                <img src="${seminImg}" class="modal-poster-img" alt="Seminar Poster">
+                <img src="${seminarImg}" class="modal-poster-img" alt="Seminar Poster">
               </div>
 
               <p style="color:var(--accent); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:1.25rem;">
