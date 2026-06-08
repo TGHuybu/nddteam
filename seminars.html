@@ -132,7 +132,6 @@
       const seminar = seminarsData[seminarId];
       const modalId = `modal_${seminarId}`;
 
-      // ĐÃ SỬA LỖI: seminarImg
       const seminarImg = seminar.image || 'https://placehold.co/600x400?text=No+Image';
 
       // Determine if seminar is upcoming or previous
@@ -143,14 +142,13 @@
       const statusBadgeClass = isUpcoming ? 'upcoming' : 'previous';
       const statusText = isUpcoming ? 'Upcoming' : 'Previous';
 
-      // Create card 
+      // ==========================================
+      // 1. TẠO CARD NGOÀI DANH SÁCH
+      // ==========================================
       const card = document.createElement('div');
       card.className = 'research-card';
-      card.setAttribute('data-bs-toggle', 'modal');
-      card.setAttribute('data-bs-target', `#${modalId}`);
       card.style.cursor = 'pointer';
 
-      // ĐÃ SỬA LỖI: Đổi ${seminImg} thành ${seminarImg}
       card.innerHTML = `
         <div class="research-card-banner">
           <img src="${seminarImg}" alt="${seminar.title}">
@@ -170,9 +168,22 @@
           <div class="research-card-btn">Learn More</div>
         </div>
       `;
+      
+      // THÊM SỰ KIỆN CLICK BẰNG JAVASCRIPT ĐỂ ÉP MỞ MODAL
+      card.addEventListener('click', () => {
+        const modalElement = document.getElementById(modalId);
+        if (modalElement) {
+          // Lấy hoặc tạo mới đối tượng Modal của Bootstrap rồi gọi lệnh hiển thị
+          const bsModal = bootstrap.Modal.getOrCreateInstance(modalElement);
+          bsModal.show();
+        }
+      });
+
       grid.appendChild(card);
 
-      // Create modal
+      // ==========================================
+      // 2. TẠO CỬA SỔ MODAL CHI TIẾT
+      // ==========================================
       const externalLinksHtml = seminar.external_links && seminar.external_links.length > 0
         ? `
           <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
@@ -192,7 +203,6 @@
       modal.setAttribute('tabindex', '-1');
       modal.setAttribute('aria-hidden', 'true');
 
-      // ĐÃ SỬA LỖI: Đổi ${seminImg} thành ${seminarImg}
       modal.innerHTML = `
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
