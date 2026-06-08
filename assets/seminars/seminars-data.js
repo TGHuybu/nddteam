@@ -4,7 +4,7 @@ const seminarsData = {
   "USACTALK 07": {
     "title": "COSMIC DAWN, THE SUN'S ORIGIN STORY, AND LIFE BEYOND EARTH - HOW SOLAR SYSTEM EXPLORATION REVEALS THE MYSTERIES OF THE UNIVERSE?",
     "speaker_name": "Dr. Trương Tuấn Ngọc",
-    "image": "assets/seminars/TS TRƯƠNG TUẤN NGỌC.png"
+    "image": "assets/seminars/TS TRƯƠNG TUẤN NGỌC.png",
     "speaker_affiliation": "NASA Goddard Space Flight Center (GSFC) / University of Maryland, Baltimore County (UMBC)",
     "date": "2026-06-21",
     "time": "20:00 PM",
