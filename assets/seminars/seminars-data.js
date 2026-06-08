@@ -11,7 +11,7 @@ const seminarsData = {
     "external_links": [
       {
         "label": "Facebook Event",
-        "url": "https://facebook.com/clbusac"
+        "url": "https://bom.so/USACTALK"
       }
     ]
   },
