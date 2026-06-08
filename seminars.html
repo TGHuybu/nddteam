@@ -8,6 +8,49 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="styles.css" rel="stylesheet" />
+  
+  <style>
+    /* Định dạng khung chứa ảnh ngoài Card danh sách */
+    .research-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .research-card-banner {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background: #111;
+      border-bottom: 1px solid var(--border);
+    }
+    .research-card-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.4s ease;
+    }
+    .research-card:hover .research-card-banner img {
+      transform: scale(1.05);
+    }
+
+    /* Định dạng vùng hiển thị poster khổ lớn trong Modal */
+    .modal-poster-container {
+      width: 100%;
+      background: #0a0a0a;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .modal-poster-img {
+      max-width: 100%;
+      max-height: 550px;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 <body>
 
@@ -40,12 +83,10 @@
   </div>
 </div>
 
-<!-- ── Seminars Grid ── -->
 <section class="section">
   <div class="section-inner">
     <div class="research-grid" id="seminarsGrid">
-      <!-- Seminars will be populated here by JavaScript -->
-    </div>
+      </div>
   </div>
 </section>
 
@@ -56,7 +97,6 @@
   </div>
 </footer>
 
-<!-- Seminar Modals will be populated here by JavaScript -->
 <div id="modalsContainer"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -68,7 +108,7 @@
     const grid = document.getElementById('seminarsGrid');
     const modalsContainer = document.getElementById('modalsContainer');
 
-    if (!grid || !seminarsData) return;
+    if (!grid || typeof seminarsData === 'undefined') return;
 
     // Create a date formatter
     const formatDate = (dateStr) => {
@@ -92,6 +132,8 @@
       const seminar = seminarsData[seminarId];
       const modalId = `modal_${seminarId}`;
 
+      const seminarImg = seminar.image || 'https://placehold.co/600x400?text=No+Image';
+
       // Determine if seminar is upcoming or previous
       const seminarDate = new Date(seminar.date + 'T00:00:00');
       const today = new Date();
@@ -100,14 +142,17 @@
       const statusBadgeClass = isUpcoming ? 'upcoming' : 'previous';
       const statusText = isUpcoming ? 'Upcoming' : 'Previous';
 
-      // Create card
+      // ==========================================
+      // 1. TẠO CARD NGOÀI DANH SÁCH
+      // ==========================================
       const card = document.createElement('div');
       card.className = 'research-card';
-      card.setAttribute('data-bs-toggle', 'modal');
-      card.setAttribute('data-bs-target', `#${modalId}`);
       card.style.cursor = 'pointer';
 
       card.innerHTML = `
+        <div class="research-card-banner">
+          <img src="${seminarImg}" alt="${seminar.title}">
+        </div>
         <div class="research-card-body">
           <div class="project-card-status ${statusBadgeClass}">${statusText}</div>
           <div class="research-card-title">${seminar.title}</div>
@@ -123,9 +168,22 @@
           <div class="research-card-btn">Learn More</div>
         </div>
       `;
+      
+      // THÊM SỰ KIỆN CLICK BẰNG JAVASCRIPT ĐỂ ÉP MỞ MODAL
+      card.addEventListener('click', () => {
+        const modalElement = document.getElementById(modalId);
+        if (modalElement) {
+          // Lấy hoặc tạo mới đối tượng Modal của Bootstrap rồi gọi lệnh hiển thị
+          const bsModal = bootstrap.Modal.getOrCreateInstance(modalElement);
+          bsModal.show();
+        }
+      });
+
       grid.appendChild(card);
 
-      // Create modal
+      // ==========================================
+      // 2. TẠO CỬA SỔ MODAL CHI TIẾT
+      // ==========================================
       const externalLinksHtml = seminar.external_links && seminar.external_links.length > 0
         ? `
           <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
@@ -153,6 +211,11 @@
               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body" style="padding:2rem;">
+              
+              <div class="modal-poster-container">
+                <img src="${seminarImg}" class="modal-poster-img" alt="Seminar Poster">
+              </div>
+
               <p style="color:var(--accent); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:1.25rem;">
                 Speaker Information
               </p>
@@ -181,7 +244,7 @@
               <p style="color:var(--accent); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:1rem;">
                 Abstract
               </p>
-              <p style="color:var(--text-muted); line-height: 1.6;">
+              <p style="color:var(--text-muted); line-height: 1.6; text-align: justify; white-space: pre-line;">
                 ${seminar.abstract}
               </p>
 
