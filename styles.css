@@ -154,6 +154,9 @@ img { max-width: 100%; display: block; }
 .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
 .team-grid.pi-grid { grid-template-columns: minmax(260px, 380px); }
 
+.team-split { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
+.team-split-col .team-grid { grid-template-columns: minmax(220px, 340px); }
+
 .team-card {
   background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 2rem 1.5rem; text-align: center;
@@ -407,6 +410,8 @@ img { max-width: 100%; display: block; }
   .hero-title { font-size: 2rem; }
   .team-grid { grid-template-columns: 1fr 1fr; }
   .team-grid.pi-grid { grid-template-columns: 1fr; }
+  .team-split { grid-template-columns: 1fr; gap: 2.5rem; }
+  .team-split-col .team-grid { grid-template-columns: 1fr; }
   .facility-grid { grid-template-columns: 1fr; }
   .project-grid { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; text-align: center; }

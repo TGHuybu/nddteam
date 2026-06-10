@@ -30,6 +30,16 @@ const publicationsData = {
   },
   'Nguyen_et_al_2026_MNRAS_546-4_1': {
     "content": [
+      {
+        "type": "text",
+        "value": "In this work, we select 5 luminous, quiescent galaxies at 1 ≲ z ≲ 2 and \
+        simulate ELT observations to extend spatially-resolved black hole mass measurements \
+        towards cosmic noon. Combining MICADO mock imaging for the host mass models with \
+        HARMONI mock stellar kinematics, we show that the supermassive black hole masses can be determined with \
+        an accuracy of ~10%. Our findings highlight that the ELT can push the frontier of SMBH mass measurements \
+        out to z ≈ 2, enabling crucial tests on SMBH-galaxy co-evolution \
+        at the top end of the galaxies mass function."
+      }
     ]
   },
   'Nguyen_et_al_2026_ApJ_999_97': {
@@ -110,9 +120,28 @@ const publicationsData = {
     ]
   },
   'Nguyen_et_al_2023_MNRAS_526-3_3548': {
-    "content": []
+    "content": [
+      {
+        "type": "text",
+        "value": "In this work, we plan a survey of 101 ultra-massive galaxies (z ≤ 0.3, \
+        stellar masses of ~2-5e12 M☉) and simulate ELT/HARMONI integral-field observations \
+        to test its ability to weigh their supermassive black holes. We show that HARMONI can \
+        recover the stellar kinematics (ΔV_rms ≲ 1.5%) within a relatively short exposure time, \
+        enabling accurate black hole mass measurements in the most massive galaxies and helping \
+        to constrain their formation histories."
+      }
+    ]
   },
   'Nguyen_et_al_2022_MNRAS_509-2_2920': {
-    "content": []
+    "content": [
+      {
+        "type": "text",
+        "value": "As part of the MBHBM⋆ Project, we present a dynamical measurement of the \
+        supermassive black hole mass in the nearby lenticular galaxy NGC 3593. Modelling the \
+        cold molecular gas kinematics observed by ALMA, we \
+        derive a black hole mass of ~2.40e6 M☉. The rapid central rise of the gas rotation \
+        provides clear dynamical evidence for a supermassive black hole at the galaxy's core."
+      }
+    ]
   }
 };
