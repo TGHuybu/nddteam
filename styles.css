@@ -43,9 +43,9 @@ img { max-width: 100%; display: block; }
   color: var(--text); font-weight: 600; font-size: .85rem;
   letter-spacing: .06em; text-transform: uppercase; flex-shrink: 0;
 }
-.brand-dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--accent); box-shadow: 0 0 10px var(--accent); flex-shrink: 0;
+.brand-logo {
+  height: 32px; width: auto; border-radius: 6px;
+  display: block; flex-shrink: 0;
 }
 .nav-links {
   display: flex; align-items: center; gap: .1rem; list-style: none;
@@ -390,6 +390,7 @@ img { max-width: 100%; display: block; }
 }
 .footer-copy { color: var(--text-muted); font-size: .83rem; }
 .footer-brand { font-family: 'Playfair Display', serif; font-size: .95rem; color: var(--accent); }
+.footer-logo { height: 6.5rem; width: auto; border-radius: 6px; display: block; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
