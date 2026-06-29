@@ -1,6 +1,6 @@
 // Publications data - organized by publication ID
 const publicationsData = {
-  'Nguyen_et_al_2026_arXiv_2601_19842': {
+  'Nguyen_et_al_2026_ApJ_1005-1_94': {
     "content": [
       {
         "type": "text",
@@ -12,7 +12,7 @@ const publicationsData = {
       },
       {
         "type": "image",
-        "src": "assets/publications/Nguyen_et_al_2026_arXiv_2601_19842/fig1.png",
+        "src": "assets/publications/Nguyen_et_al_2026_ApJ_1005-1_94/fig1.png",
         "caption": "HST/WFPC2 F814W image of NGC 4061, with ALMA integrated intensity contours \
         of the central region overlaid in cyan (Figure 1)"
       }
