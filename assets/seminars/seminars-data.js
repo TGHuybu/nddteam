@@ -16,13 +16,13 @@ const seminarsData = {
         "url": "https://bom.so/USACTALK"
       }
     ]
-  }
-    "USACTALK 08": {
+  },
+  "USACTALK 08": {
     "title": "RELATING STELLAR AND LIGHT CURVE PARAMETERS ALONG THE ASYMPTOTIC GIANT BRANCH",
     "speaker_name": "Dr. Phạm Tuyết Nhung",
     "image": "assets/seminars/USACTalk8.jpg",
     "speaker_affiliation": " Vietnam National Space Center (VNSC)/Vietnam Academy of Science and Technology (VAST)",
-    "date": "2026-09-05-",
+    "date": "2026-09-05",
     "time": "20:00 PM",
     "venue": "GOOGLE MEET",
     "abstract": "Understanding the mechanisms responsible for pulsations in some AGB stars remains an open problem. While pulsation properties are primarily governed by the physics of the stellar interior, atmospheric processes have a strong impact on the appearance of the light curve. We investigate the extent to which the study of light curves may serve as an efficient tool for understanding the internal dynamics of pulsating AGB stars. Using well-measured light curves, we define parameters that characterize their features in greater detail than previously attempted and examine correlations between these parameters and stellar properties. Recent work has extended this approach beyond Mira variables to include semi-regular and irregular stars, providing evidence for two families of AGB stars following distinct evolutionary pathways and giving rise to different light-curve properties. The interpretation of these results is discussed in the context of current state-of-the-art knowledge. While stars belonging to the first family tend to have larger initial masses than those of the second, the properties of the circumstellar envelope also seem to play a role in determining which of the two families a star belongs to.",
