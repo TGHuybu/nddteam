@@ -50,6 +50,33 @@
       object-fit: contain;
       border-radius: 4px;
     }
+
+    /* Khối giới thiệu USACTalk */
+    .about-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem 2.25rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+    .about-box i {
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-top: .2rem;
+      flex-shrink: 0;
+    }
+    .about-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: #fff;
+      margin-bottom: .5rem;
+    }
+    .about-box p {
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
   </style>
 </head>
 <body>
@@ -82,6 +109,22 @@
     </p>
   </div>
 </div>
+
+<section class="section" style="padding-bottom:0;">
+  <div class="section-inner">
+    <div class="about-box">
+      <i class="fas fa-broadcast-tower"></i>
+      <div>
+        <h3>About USACTalk</h3>
+        <p>
+          USACTalk is an academic seminar series dedicated to connecting students and science enthusiasts with researchers in
+          Astronomy, Astrophysics, Cosmology, and Space Science both locally and globally.
+          The series is hosted by the USAC Astronomy Club and co-organized with the Galaxy Dynamics Lab.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="section-inner">
