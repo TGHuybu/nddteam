@@ -17,6 +17,42 @@ const seminarsData = {
       }
     ]
   },
+  "TALKSHOW 01": {
+    "title": "TALKSHOW: THE PhD APPLICATION JOURNEY IN ASTRONOMY",
+    "speakers": [
+      {
+        "name": "Ngô Ngọc Hải",
+        "affiliation": "PhD Student in Astronomy & Astrophysics, University of Michigan, USA"
+      },
+      {
+        "name": "Nguyễn Hữu Thịnh",
+        "affiliation": "PhD Student in Astrophysics, University of Illinois Urbana-Champaign, USA"
+      }
+    ],
+    "image": "assets/seminars/talkshow-1.jpg",
+    "date": "2026-08-02",
+    "time": "20:00 – 22:00 (GMT+7)",
+    "venue": "GOOGLE MEET",
+    "abstract": "Every discovery begins with a question. How did the universe begin? What shapes the galaxies we see? Why is Earth able to sustain life?\n\nQuestions as simple as these have launched research careers that span decades. For young people who dream of pursuing astronomy or the fundamental sciences, there is often another question to answer first: \"What do I need to prepare to start this journey?\"\n\nIn \"The PhD Application Journey in Astronomy\", two PhD students at leading U.S. universities share first-hand insights into their research paths, how they prepared their PhD applications, and what it is like to work in an international academic environment.\n\nWho should attend: undergraduate students and anyone interested in scientific research or considering graduate study (Master's or PhD).\n\nSometimes a single conversation can be the start of an entire journey. If you are searching for answers about your own academic path, don't miss this talkshow!\n\nThis event is co-organized by the Galaxy Dynamics Lab."
+  },
+  "TALKSHOW 02": {
+    "title": "TALKSHOW: THE PhD APPLICATION JOURNEY IN ASTRONOMY – SESSION 2",
+    "speakers": [
+      {
+        "name": "Trần Quang Vinh",
+        "affiliation": "PhD Student in Astrophysics, California Institute of Technology (Caltech), USA"
+      },
+      {
+        "name": "Nguyễn Quốc Bảo",
+        "affiliation": "PhD Student in Astronomy, Center for Astrophysics | Harvard & Smithsonian, Harvard University, USA"
+      }
+    ],
+    "image": "assets/seminars/talkshow-2.jpg",
+    "date": "2026-08-24",
+    "time": "20:00 – 22:00 (GMT+7)",
+    "venue": "GOOGLE MEET",
+    "abstract": "Are you passionate about exploring the vast universe? Do you dream of becoming a researcher at one of the world's leading space science centers?\n\nThe road from Vietnam to a PhD program in astronomy in the United States calls for careful and rigorous preparation. Where should you start? How important are international publications? And how can you stand out to some of the most selective admissions committees?\n\nBuilding on the first session, Session 2 of \"The PhD Application Journey in Astronomy\" brings more inspiring stories and practical, hands-on advice on building a strong academic profile, publishing scientific papers, and earning admission to some of the most prestigious universities in the United States.\n\nWho should attend: undergraduate students and anyone interested in scientific research or considering graduate study (Master's or PhD).\n\nSometimes a single conversation can be the start of an entire journey. If you are searching for answers about your own academic path, don't miss this talkshow!\n\nThis event is co-organized by the Galaxy Dynamics Lab."
+  },
   "USACTALK 08": {
     "title": "RELATING STELLAR AND LIGHT CURVE PARAMETERS ALONG THE ASYMPTOTIC GIANT BRANCH",
     "speaker_name": "Dr. Phạm Tuyết Nhung",
