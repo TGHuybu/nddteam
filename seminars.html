@@ -180,6 +180,9 @@
 
       const seminarImg = seminar.image || 'https://placehold.co/600x400?text=No+Image';
 
+      // Support multiple speakers via `speakers`, falling back to single speaker fields
+      const speakers = seminar.speakers || [{ name: seminar.speaker_name, affiliation: seminar.speaker_affiliation }];
+
       // Determine if seminar is upcoming or previous
       const seminarDate = new Date(seminar.date + 'T00:00:00');
       const today = new Date();
@@ -202,10 +205,12 @@
         <div class="research-card-body">
           <div class="project-card-status ${statusBadgeClass}">${statusText}</div>
           <div class="research-card-title">${seminar.title}</div>
-          <div class="research-card-desc" style="margin-bottom:0.75rem;">
-            <strong>${seminar.speaker_name}</strong><br>
-            <span style="font-size:0.95em; color:var(--text-muted);">${seminar.speaker_affiliation}</span>
-          </div>
+          ${speakers.map(sp => `
+            <div class="research-card-desc" style="margin-bottom:0.75rem;">
+              <strong>${sp.name}</strong><br>
+              <span style="font-size:0.95em; color:var(--text-muted);">${sp.affiliation}</span>
+            </div>
+          `).join('')}
           <div class="research-card-desc" style="font-size:0.9em; margin-bottom:0;">
             📅 ${formatDate(seminar.date)}<br>
             🕐 ${seminar.time}<br>
@@ -265,12 +270,14 @@
               <p style="color:var(--accent); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:1.25rem;">
                 Speaker Information
               </p>
-              <p style="color:var(--text-muted); margin-bottom:0.5rem;">
-                <strong style="color:var(--text); font-size:1rem;">${seminar.speaker_name}</strong>
-              </p>
-              <p style="color:var(--text-muted); margin-bottom:1.5rem;">
-                ${seminar.speaker_affiliation}
-              </p>
+              ${speakers.map(sp => `
+                <p style="color:var(--text-muted); margin-bottom:0.5rem;">
+                  <strong style="color:var(--text); font-size:1rem;">${sp.name}</strong>
+                </p>
+                <p style="color:var(--text-muted); margin-bottom:1.5rem;">
+                  ${sp.affiliation}
+                </p>
+              `).join('')}
               
               <p style="color:var(--accent); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:1rem;">
                 Event Details
