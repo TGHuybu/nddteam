@@ -52,6 +52,19 @@
 
 
 
+      <div class="news-card" data-bs-toggle="modal" data-bs-target="#news_ngc315_nrao">
+        <img class="news-card-img" src="assets/img/news/NRAO_Spotlight_NGC315/figure.png" alt="News" />
+        <div class="news-card-body">
+          <div class="news-card-date">24/10/2026 · Science</div>
+          <div class="news-card-title">Our Paper on NGC 315 using ALMA is Featured in NRAO Science Spotlight.</div>
+          <div class="news-card-summary">
+            Using ALMA Cycle 7 data of NGC 315, we constructed nine different gas-dynamical models to measure the 
+            mass of its supermassive black hole. Results from all nine models are consistent, but the 
+            inferred mass is 32% below the stellar-dynamical value. Future works using higher-resolution ALMA data 
+            and stellar-kinematics measurements from JWST will help resolve this puzzle.
+          </div>
+        </div>
+      </div>
 
 
 
@@ -70,7 +83,7 @@
       
 
       <div class="news-card" data-bs-toggle="modal" data-bs-target="#news_huy_moe">
-        <img class="news-card-img" src="assets/img/news/HuyTong_ASIAA_IIPP/Huy_ASIAA.JPEG" alt="News" />
+        <img class="news-card-img" src="assets/img/news/HuyTong_MOE/IMG_3452.JPEG" alt="News" />
         <div class="news-card-body">
           <div class="news-card-date">30/05/2026 · Announcement</div>
           <div class="news-card-title">Huy Tong Has Been Awarded the 2026 Ministry of Education (MOE) Taiwan Scholarship.</div>
@@ -187,6 +200,56 @@
 <!-- News Modal -->
 
 
+<div class="modal fade" id="news_ngc315_nrao" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header" style="border-bottom:1px solid var(--border); padding:1.5rem;">
+        <h2 class="modal-title" style="font-size:1.3rem;">
+          Our Paper on NGC 315 using ALMA is Featured in NRAO Science Spotlight
+        </h2>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="padding:2rem;">
+        <p style="color:var(--accent); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:1.25rem;">
+          Date: 24/10/2026
+        </p>
+        <img class="img-fluid rounded mb-3" src="assets/img/news/NRAO_Spotlight_NGC315/figure.png" alt="" />
+        <p style="font-size:.78rem; color:var(--text-muted); margin-bottom:1.25rem;">
+          <em>Figure: Black hole mass of NGC 315 from nine gas-dynamical models fitted to the same ALMA Cycle 7 
+            ¹²CO(2-1) data cube, with 1σ uncertainties. The dashed line and shaded band show the ensemble median 
+            and its 68% bootstrap interval. The earlier ALMA Cycle 5 measurement (<a href="https://arxiv.org/pdf/2012.04669" target="_blank">Boizelle et al. 2021</a>) and the 
+            stellar-dynamical measurement (<a href="https://arxiv.org/pdf/2504.01071" target="_blank">Pilawa et al. 2025</a>) are shown for comparison. 
+            Adapted from <a href="https://arxiv.org/abs/2608.31015" target="_blank">Nguyen et al. 2026</a>.
+          </em>
+        </p>
+        <p>
+          Cold molecular gas disks observed with ALMA have become one of the most precise ways to weigh supermassive black holes (SMBHs). 
+          When the CO emission is resolved inside the black hole's sphere of influence, the gas velocity rises toward the center in a nearly Keplerian way, 
+          and the mass follows from a forward model of the full data cube. 
+          However, the community uses several modeling codes that differ in how they sample the parameter space, 
+          describe the gas surface brightness, and treat the disk geometry. 
+          These codes have rarely been applied to the same data, so it is unclear how much a published black hole 
+          mass depends on the choices of the modeler.
+        </p>
+        <p>
+          In <a href="https://arxiv.org/abs/2608.31015" target="_blank">Nguyen et al. (2026)</a>, we carry out this test on NGC 315, a giant elliptical radio galaxy at 72 Mpc that hosts a regularly rotating circumnuclear disk 
+          about 1 kpc across, observed by ALMA in Cycle 7. We fitted the same data cube with nine different models, and 
+          we find that the inferred black hole mass is consistent across nine gas models. However, our mass is 32% below the stellar-dynamical value. 
+          Future works using higher-resolution ALMA data and a JWST stellar-kinematics measurement will help resolve this puzzle.
+        </p>
+        <p>
+          <strong>Check out the full NRAO Science Spotlight article here: </strong>[TBD]
+          <!-- <a href="" target="_blank">
+            [TBD]
+          </a>  -->
+        </p>
+      </div>
+      <div class="modal-footer" style="border-top:1px solid var(--border);">
+        <button class="hero-cta" data-bs-dismiss="modal" style="font-size:.78rem; padding:.6rem 1.4rem;">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <div class="modal fade" id="news_ndd_elt_fellowsip" tabindex="-1" aria-hidden="true">
